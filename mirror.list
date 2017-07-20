@@ -1,0 +1,182 @@
+############# config ##################
+#
+# set base_path    /var/spool/apt-mirror
+#
+# set mirror_path  $base_path/mirror
+# set skel_path    $base_path/skel
+# set var_path     $base_path/var
+# set cleanscript $var_path/clean.sh
+# set defaultarch  <running host architecture>
+# set postmirror_script $var_path/postmirror.sh
+# set run_postmirror 0
+#set nthreads     20
+#set _tilde 0
+#
+############# end config ##############
+
+set base_path         /home/apt-mirror
+set mirror_path       $base_path/mirror
+set skel_path         $base_path/skel
+set var_path          $base_path/var
+set postmirror_script $varpath/postmirror.sh
+set defaultarch       amd64
+set run_postmirror    0
+set nthreads          20
+set _tilde            0
+# Use --unlink with wget (for use with hardlinked directories)
+set unlink            1
+set use_proxy         off
+set http_proxy        127.0.0.1:3128
+set proxy_user        user
+set proxy_password    password
+
+
+
+deb http://ftp.debian.org/debian/ jessie main contrib non-free
+deb http://ftp.debian.org/debian/ jessie-updates main contrib non-free
+deb http://security.debian.org/ jessie/updates main contrib non-free 
+
+deb  http://ftp.debian.org/debian/ jessie main contrib non-free
+deb  http://ftp.debian.org/debian/ jessie-updates main contrib non-free
+deb  http://security.debian.org/ jessie/updates main contrib non-free
+
+deb http://ftp.debian.org/debian wheezy non-free main contrib
+deb http://ftp.debian.org/debian wheezy-updates non-free main contrib
+deb http://security.debian.org wheezy/updates main contrib
+
+deb http://ftp.debian.org/debian wheezy non-free main contrib
+deb http://ftp.debian.org/debian wheezy-updates non-free main contrib
+deb http://security.debian.org wheezy/updates main contrib
+
+
+deb http://repo.zabbix.com/zabbix/3.2/ubuntu trusty main
+
+
+
+
+deb http://il.archive.ubuntu.com/ubuntu/ precise main restricted universe multiverse 
+deb http://il.archive.ubuntu.com/ubuntu/ precise-security main restricted multiverse
+deb http://il.archive.ubuntu.com/ubuntu/ precise-updates main restricted multiverse
+
+
+deb http://il.archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+deb http://il.archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://il.archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb http://il.archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+deb http://il.archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://il.archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/juno main
+deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/juno main
+
+deb http://pkg.jenkins-ci.org/debian binary/
+deb http://pkg.jenkins-ci.org/debian binary/
+
+deb https://apt.dockerproject.org/repo ubuntu-trusty main
+deb https://apt.dockerproject.org/repo ubuntu-trusty main
+
+deb https://deb.nodesource.com/node_0.12 trusty main
+deb https://deb.nodesource.com/node_0.12 trusty main
+
+deb-src https://deb.nodesource.com/node_0.12 trusty main
+deb-src https://deb.nodesource.com/node_0.12 trusty main
+
+deb https://deb.nodesource.com/node_0.10 trusty main
+deb https://deb.nodesource.com/node_0.10 trusty main
+deb-src https://deb.nodesource.com/node_0.10 trusty main
+deb-src https://deb.nodesource.com/node_0.10 trusty main
+
+deb https://deb.nodesource.com/node_4.x trusty main
+deb https://deb.nodesource.com/node_4.x trusty main
+deb-src https://deb.nodesource.com/node_4.x trusty main
+deb-src https://deb.nodesource.com/node_4.x trusty main
+
+deb https://deb.nodesource.com/node_5.x trusty main
+deb https://deb.nodesource.com/node_5.x trusty main
+deb-src https://deb.nodesource.com/node_5.x trusty main
+deb-src https://deb.nodesource.com/node_5.x trusty main
+
+deb https://deb.nodesource.com/node_6.x trusty main
+deb https://deb.nodesource.com/node_6.x trusty main
+deb-src https://deb.nodesource.com/node_6.x trusty main
+deb-src https://deb.nodesource.com/node_6.x trusty main
+
+deb https://deb.nodesource.com/node_7.x trusty main
+deb https://deb.nodesource.com/node_7.x trusty main
+deb-src https://deb.nodesource.com/node_7.x trusty main
+deb-src https://deb.nodesource.com/node_7.x trusty main
+
+deb http://repo.saltstack.com/apt/ubuntu/14.04/amd64/latest trusty main
+
+deb http://packages.vmware.com/packages/ubuntu trusty main
+
+deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse
+
+deb https://deb.nodesource.com/node_0.12 wheezy main
+deb https://deb.nodesource.com/node_0.12 wheezy main
+deb-src https://deb.nodesource.com/node_0.12 wheezy main
+deb-src https://deb.nodesource.com/node_0.12 wheezy main
+
+deb http://deb.theforeman.org/ trusty 1.14
+deb http://deb.theforeman.org/ plugins 1.14
+
+deb http://cloudstack.apt-get.eu/ubuntu trusty 4.8
+deb http://cloudstack.apt-get.eu/ubuntu trusty 4.8
+
+deb http://repo.mongodb.com/apt/ubuntu trusty/mongodb-enterprise/stable multiverse
+
+deb http://dl.google.com/linux/chrome/deb/ stable main
+
+deb http://ppa.launchpad.net/ubuntu-mate-dev/ppa/ubuntu trusty main
+
+deb http://ppa.launchpad.net/ubuntu-mate-dev/trusty-mate/ubuntu trusty main
+
+deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu trusty main
+deb-src http://ppa.launchpad.net/openjdk-r/ppa/ubuntu trusty main
+
+deb http://packages.gitlab.com/gitlab/gitlab-ce/ubuntu trusty main
+
+deb http://repos.fusiondirectory.org/debian-jessie jessie main
+
+deb http://repos.fusiondirectory.org/debian-extra wheezy main
+
+deb http://repos.fusiondirectory.org/official-releases/debian/argonaut-extra jessie main
+
+deb http://repos.fusiondirectory.org/official-releases/debian/argonaut-jessie stable main
+
+deb http://repo.aptly.info/ squeeze main
+
+deb http://ppa.launchpad.net/andrei-pozolotin/maven3/ubuntu trusty main 
+
+deb http://dl.yarnpkg.com/debian/ stable main
+
+deb http://ppa.launchpad.net/presslabs/gitfs/ubuntu trusty main 
+
+deb http://ppa.launchpad.net/git-core/ppa/ubuntu trusty main
+
+deb https://packagecloud.io/github/git-lfs/ubuntu/ trusty main
+
+deb https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main
+
+
+clean http://repo.aptly.info/ squeeze main
+clean http://packages.gitlab.com/gitlab/gitlab-ce/ubuntu
+clean https://apt.dockerproject.org/repo
+clean http://pkg.jenkins-ci.org/debian
+clean http://repo.saltstack.com/apt/ubuntu/14.04/amd64/latest
+clean http://repo.mongodb.org/apt/ubuntu
+clean https://deb.nodesource.com/node_0.10
+clean https://deb.nodesource.com/node_0.12
+clean https://deb.nodesource.com/node_4.x
+clean https://deb.nodesource.com/node_5.x
+
+clean http://deb.theforeman.org/
+clean http://ftp.debian.org/debian
+clean http://security.debian.org wheezy/updates
+clean http://repo.zabbix.com/zabbix/2.4/debian
+clean http://security.debian.org wheezy/updates
+clean http://il.archive.ubuntu.com/ubuntu
+clean http://pkg.jenkins-ci.org/debian binary/
+clean http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/juno main
+ 
